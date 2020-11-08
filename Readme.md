@@ -1,6 +1,6 @@
 # Galleria : Online Image Gallery
 #### Galleria is an online image sharing or selling platform.
-Note: This is an academic project
+Note: This is an academic project, [View Demo](https://drive.google.com/file/d/1HwwhNscy10OnbrSW2C3AhcrsgFEENN3V/view?usp=sharing)
 
 Check [Setup Guide](Setup.md) to Run this Project
 
@@ -120,5 +120,6 @@ Check [User Types](#type-of-users)
     * This user account should be created from Admin Console of GlassFish server with role `admin`.
     * GlassFish Admin Console : `http://localhost:4848/`
     * Admin Homepage: `http://localhost:8080/web_war_exploded/galleria.admin`
+    * Logging into admin panel is little tricky, click on text 'Verify' to open login modal.
 
 Check [Setup Guide](Setup.md) to Run this Project
