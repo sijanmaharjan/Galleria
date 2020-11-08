@@ -1,4 +1,5 @@
 # Galleria
+Check [User Accounts](#login-user-accounts)
 ### Project Setup Guide
 
 ```shell script
@@ -42,7 +43,7 @@ git clone https://github.com/sijanmaharjan/Galleria.git
 #### Login User Accounts
 `from-mock-data` `try-logging-in`
 
-These are user accounts of general users added through mock data [sql](#DatabaseSetup).
+These are user accounts of general users added through mock data [sql](#database-setup-br-entities-views-triggers-stored-procedures-mock-data-included).
 
 | Username  | Password  | accessibility
 |-----------|-----------|---------------
@@ -54,4 +55,4 @@ These are user accounts of general users added through mock data [sql](#Database
 ### Admin User Accounts
 Create Admin User Account using Admin Console of GlassFish Server
 
-[Learn More About User Types](Readme.md#TypeOfUsers)
+[Learn More About User Types](Readme.md#type-of-users)

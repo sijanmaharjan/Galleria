@@ -3,7 +3,8 @@
 Note: This is an academic project
 
 Check [Setup Guide](Setup.md) to Run this Project
-Check [User Types](#TypeOfUsers)
+
+Check [User Types](#type-of-users)
 
 ### Features List-out:
 * **Must-Have** Functionalities: `included`
@@ -48,7 +49,7 @@ Check [User Types](#TypeOfUsers)
 
 ### Designing
 ##### Mockup
-![design scshot](assets/design.png)
+![design screenshot](assets/design.png)
 
 [View All](assets/OIG.drawio) (Hints: Open with [Diagrams.net](https://app.diagrams.net/?src=about))
 
@@ -89,32 +90,19 @@ Check [User Types](#TypeOfUsers)
 | 11   | app_status             |
 
 ##### Database Triggers
-| SN    | Entity        | Trigger                   | Call Procedure                    | Description
-|-------|---------------|---------------------------|-----------------------------------|------------------------
-|-------|---------------|---------------------------|-----------------------------------|------------------------
-| 1     | Favourite     | like_notification_trigger | create_liked_notification         | creates notification when user marks image as favourite
-|       |               | `after insert`            |                                   |                               
-|-------|---------------|---------------------------|-----------------------------------|------------------------
-| 2     | Rating        | image_rated_trigger       | image_rated_notification          | creates notification on image rated by viewer
-|       |               | `after insert`            |                                   |                               
-|-------|---------------|---------------------------|-----------------------------------|------------------------
-| 3     | RedeemRequest | check_redeem_amount       | -                                 | validates redeem amount and creates exception to block insertion
-|       |               | `before insert`           |                                   | if unacceptable (ex. amount < 5 or amount > earnings)
-|-------|---------------|---------------------------|-----------------------------------|------------------------
-| 4     | RedeemRequest | redeem_request_made       | redeem_inqueue_notification       | creates notification about redemption request added to queue 
-|       |               | `after insert`            |                                   |                               
-|-------|---------------|---------------------------|-----------------------------------|------------------------
-| 5     | RedeemRequest | check_redemption_status   | handle_redemption_success         | updates earnings(cash on account) if redemption succeed, earnings -= redeem_amount
-|       |               | `after update`            | redeem_success_notification       | creates notification about successful redemption<br>  `payment made into bank_account`
-|       |               |                           | redeem_inqueue_notification       | creates notification about redemption request added to queue
-|       |               |                           | redeem_rejected_notification      | creates notification about redemption request rejected
-|       |               |                           | redeem_req_accepted_notification  | creates notification on redemption request accepted<br> `payments not made yet`
-|-------|---------------|---------------------------|-----------------------------------|------------------------
-| 6     | SoldImage     | sold_notification         | create_sales_notification         | creates notification on purchase successful
-|       |               | `after insert`            |                                   | 
-|-------|---------------|---------------------------|-----------------------------------|------------------------
-| 7     | SoldImage     | update_earnings           | update_earnings                   | updates earnings on successful purchase, earnings += image_price
-|       |               | `after insert`            |                                   | 
+| SN    | Entity        | Trigger                                       | Call Procedure                    | Description
+|-------|---------------|-----------------------------------------------|-----------------------------------|------------------------
+| 1     | Favourite     | like_notification_trigger<br> `after insert`  | create_liked_notification         | creates notification when user marks image as favourite
+| 2     | Rating        | image_rated_trigger<br> `after insert`        | image_rated_notification          | creates notification on image rated by viewer
+| 3     | RedeemRequest | check_redeem_amount<br> `before insert`       | -                                 | validates redeem amount and creates exception to block insertion<br> if unacceptable (ex. amount < 5 or amount > earnings)
+| 4     | RedeemRequest | redeem_request_made<br> `after insert`        | redeem_inqueue_notification       | creates notification about redemption request added to queue 
+| 5     | RedeemRequest | check_redemption_status<br> `after update`    | handle_redemption_success         | updates earnings(cash on account) if redemption succeed, earnings -= redeem_amount
+|       |               |                                               | redeem_success_notification       | creates notification about successful redemption<br>  `payment made into bank_account`
+|       |               |                                               | redeem_inqueue_notification       | creates notification about redemption request added to queue
+|       |               |                                               | redeem_rejected_notification      | creates notification about redemption request rejected
+|       |               |                                               | redeem_req_accepted_notification  | creates notification on redemption request accepted<br> `payments not made yet`
+| 6     | SoldImage     | sold_notification<br> `after insert`          | create_sales_notification         | creates notification on purchase successful
+| 7     | SoldImage     | update_earnings<br> `after insert`            | update_earnings                   | updates earnings on successful purchase, earnings += image_price
 
 <br>
 
@@ -122,8 +110,8 @@ Check [User Types](#TypeOfUsers)
 * General User  : could be anyone who uses the service<br>
     * They can perform all the activities listed above except of super-admin
     * They can upload image, can search images, can buy images, can check personal dashboard
-    * [view all functionalities](#Features_List-out)
-    * User account Information of General User are all stored in Database. In User Entity. [View ER Diagram](#) 
+    * [view all functionalities](#features-list-out)
+    * User account Information of General User are all stored in Database. In User Entity. [View ER Diagram](#database) 
     * Homepage: `http://localhost:8080/web_war_exploded/galleria.oh`
     
 * Administrator
