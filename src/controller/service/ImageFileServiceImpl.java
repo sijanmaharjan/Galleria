@@ -91,46 +91,46 @@ public class ImageFileServiceImpl implements ImageFileService {
         images.forEach(image -> removeFile(applicationPath, image));
     }
 
-    private void removeFile(String applicationPath, Image image){
+    public void removeFile(String applicationPath, Image image){
         String fileName = getFileName(image);
         deleteFile(getImagePath(applicationPath), fileName);
         deleteFile(getThumbPath(applicationPath), fileName);
     }
 
-    private void deleteFile(String path, String fileName){
+    public void deleteFile(String path, String fileName){
         File file = getFile(path, fileName);
         if(file.exists()) file.delete();
     }
 
-    private String getApplicationPath(HttpServletRequest request){
+    public String getApplicationPath(HttpServletRequest request){
         return request.getServletContext().getRealPath("");
     }
 
-    private String getImagePath(String applicationPath){
+    public String getImagePath(String applicationPath){
         return applicationPath + File.separator + IMAGE_DIR;
     }
 
-    private String getThumbPath(String applicationPath){
+    public String getThumbPath(String applicationPath){
         return applicationPath + File.separator + THUMB_DIR;
     }
 
-    private File getImageFile(String applicationPath, String fileName){
+    public File getImageFile(String applicationPath, String fileName){
         return getFile(getImagePath(applicationPath), fileName);
     }
 
-    private File getThumbFile(String applicationPath, String fileName){
+    public File getThumbFile(String applicationPath, String fileName){
         return getFile(getThumbPath(applicationPath), fileName);
     }
 
-    private String getFileName(Image image){
+    public String getFileName(Image image){
         return image.getId() + IMG_EXTENSION;
     }
 
-    private File getFile(String path, String fileName){
+    public File getFile(String path, String fileName){
         return new File(path, fileName);
     }
 
-    private void createDirectory(File path){
+    public void createDirectory(File path){
         if (!path.exists()) {
             path.mkdirs();
         }
