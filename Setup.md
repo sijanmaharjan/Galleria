@@ -6,8 +6,8 @@ Check [User Accounts](#login-user-accounts)
 git clone https://github.com/sijanmaharjan/Galleria.git
 ```
 
-##### Dependencies `included` `all-set`
-[view folder](lib)
+##### Dependencies 
+[download dependencies](https://drive.google.com/file/d/19vYf2BxiO9cK8wfHwTsKTrqzCVcE5PKy/view?usp=sharing) & [load them to lib/ directory](lib) 
 ```
 - EJB
 - JPA
