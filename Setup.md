@@ -43,7 +43,7 @@ git clone https://github.com/sijanmaharjan/Galleria.git
 #### Login User Accounts
 `from-mock-data` `try-logging-in`
 
-These are user accounts of general users added through mock data [sql](#database-setup-br-entities-views-triggers-stored-procedures-mock-data-included).
+These are user accounts of general users added through mock data [sql](#database-setup--entities-views-triggers-stored-procedures-mock-data-included).
 
 | Username  | Password  | accessibility
 |-----------|-----------|---------------
