@@ -1,0 +1,149 @@
+.clear-btn{
+    float: right;
+    border-radius: 10px;
+    font-size: 8pt;
+    padding: 0px 5px;
+    margin-top: 5px;
+}
+a.clear-btn:not([href]) {
+    !important;
+    background-color: #1e1e1e;
+    color: #e6e6e6;
+    text-decoration: none;
+}
+a.clear-btn:not([href]):hover {
+    !important;
+    background-color: #e6e6e6;
+    color: #1e1e1e;
+    text-decoration: none;
+}
+.custom-btn{
+    height: 20px;
+    font-size: 10pt;
+    padding: 0px 5px;
+    width: 100%;
+    background-color: #333333;
+    border: 0px;
+    margin-top: 3px;
+    border-radius: 3px;
+    color: #e6e6e6;
+}
+.custom-btn {
+
+}
+.img-900-350{
+    width: 900px;
+    height: 350px;
+    overflow: hidden;
+}
+.img-900-350 img{
+    width: 825px;
+    min-height: 350px;
+}
+.img-150{
+    height: 150px;
+    overflow: hidden;
+}
+.img-150 img{
+    min-width: 253px;
+    min-height: 150px;
+}
+.custom-user{
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: -9px;
+}
+.custom-user:hover{
+    background-color: #1e1e1e;
+    color: #e6e6e6;
+}
+
+.carousel-title{
+    display: none;
+    position: absolute;
+    text-align: center;
+    width: 825px;
+    color: #e6e6e6;
+}
+
+.carousel-actions{
+    display: none;
+    position: absolute;
+    color: white;
+    margin-top: 300px;
+    margin-left: 700px;
+    z-index: 100;
+}
+
+.carousel-rating{
+    display: none;
+    position: absolute;
+    color: white;
+    margin-top: 285px;
+    margin-left: 50px;
+    z-index: 100;
+}
+
+.carousel-title-background{
+    display: none;
+    position: absolute;
+    height: 50px;
+    width: 825px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 15%, rgba(0,0,0,0) 80%)
+}
+
+.carousel-action-background{
+    display: none;
+    position: absolute;
+    height: 100px;
+    width: 825px;
+    margin-top: 250px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.6) 15%, rgba(0,0,0,0) 100%)
+}
+
+.img-title{
+    font-size: 14pt;
+}
+
+.custom.card-body{
+    padding: 5px;
+}
+
+.search-field{
+    width: 100%;
+    padding-right: 50px;
+}
+.search-actions{
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 205px;
+    font-size: 8pt;
+}
+.search-icon{
+    margin-top: 0px;
+    font-size: 12pt;
+    cursor: pointer;
+}
+.vertical-splitter{
+    background-color: #cdc7c2;
+    height: 30px;
+    width: 1px;
+    position: absolute;
+    margin-top: -6px;
+}
+
+.clear-search{
+    cursor: pointer;
+}
+
+.full-body-mask{
+    position: fixed;
+    z-index: 100;
+    background-color: #1e1e1e;
+    margin-top: -56px;
+    height: 100vh;
+    width: 100vw;
+}

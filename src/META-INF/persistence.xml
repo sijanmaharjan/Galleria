@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+>
+    <persistence-unit name="Galeria">
+        <!--    Tables    -->
+        <class>bean.entity.User</class>
+        <class>bean.entity.BankDetail</class>
+        <class>bean.entity.Category</class>
+        <class>bean.entity.Image</class>
+        <class>bean.entity.Favourite</class>
+        <class>bean.entity.Notification</class>
+        <class>bean.entity.Rating</class>
+        <class>bean.entity.Wishlist</class>
+        <class>bean.entity.RedeemRequest</class>
+        <class>bean.entity.SoldImage</class>
+        <!--    /Tables    -->
+        <!--    DB Views    -->
+        <class>bean.view.AppStatus</class>
+        <class>bean.view.DetailedImage</class>
+        <class>bean.view.DetailedUser</class>
+        <class>bean.view.HighlyRatedImage</class>
+        <class>bean.view.MostExpensiveImage</class>
+        <class>bean.view.MostlyLikedImage</class>
+        <class>bean.view.MostlySoldImage</class>
+        <class>bean.view.TopEarningAccount</class>
+        <class>bean.view.TopRatedAccount</class>
+        <class>bean.view.TransactionStatement</class>
+        <class>bean.view.Wish</class>
+        <!--    /DB Views    -->
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Galeria"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+<!--            <property name="eclipselink.ddl-generation" value="create-tables"/>-->
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+        </properties>
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,285 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>Custom Tags for Galleria</short-name>
+    <tag>
+        <name>URLQuery</name>
+        <tag-class>controller.taglib.UrlQuery</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>page</name>
+            <type>java.lang.String</type>
+            <description>current page in URL</description>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>searchText</name>
+            <type>java.lang.String</type>
+            <description>search text (if any)</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>CID</name>
+            <type>java.lang.String</type>
+            <description>selected category id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>filterBy</name>
+            <type>java.lang.String</type>
+            <description>filter by selection: [mostly_liked, highly_rated, price_range]</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>min</name>
+            <type>java.lang.Double</type>
+            <description>min value in price range. required if filterBy = price_range</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>max</name>
+            <type>java.lang.Double</type>
+            <description>max value in price range. required if filterBy = price_range</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>ifSelected</name>
+        <tag-class>controller.taglib.IfSelected</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>id</name>
+            <type>java.lang.String</type>
+            <description>unique id</description>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>selected</name>
+            <type>java.lang.String</type>
+            <description>selection id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>Uploader</name>
+        <tag-class>controller.taglib.Uploader</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>UID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>unique id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>current</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>user id in session</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>ifAccessible</name>
+        <tag-class>controller.taglib.IfAccessible</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>UID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>User Id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>IID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>Image Id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>IsOwnedOrAccessible</name>
+        <tag-class>controller.taglib.IsOwnedOrAccessible</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>UID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>User Id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>IID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>Image Id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>ifNotOwned</name>
+        <tag-class>controller.taglib.IfNotOwned</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>UID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>User Id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>IID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>Image Id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>HasRated</name>
+        <tag-class>controller.taglib.HasRated</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>UID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>User Id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>IID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>Image Id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>IsInWishlist</name>
+        <tag-class>controller.taglib.IsInWishlist</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>UID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>User Id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>IID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>Image Id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>Rating</name>
+        <tag-class>controller.taglib.Rating</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>stars</name>
+            <required>true</required>
+            <type>java.lang.Float</type>
+            <description>prints stars GUI</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>count</name>
+            <type>java.lang.Integer</type>
+            <description>number of raters</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>Age</name>
+        <tag-class>controller.taglib.Age</tag-class>
+        <body-content>empty</body-content>
+        <description>calculates age using date of birth</description>
+        <attribute>
+            <name>dob</name>
+            <required>true</required>
+            <type>java.util.Date</type>
+            <description>Date of Birth</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>Statement</name>
+        <tag-class>controller.taglib.Statement</tag-class>
+        <body-content>empty</body-content>
+        <description>maps statement object into table row</description>
+        <attribute>
+            <name>obj</name>
+            <required>true</required>
+            <type>bean.view.TransactionStatement</type>
+            <description>statement object</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>zone</name>
+            <required>true</required>
+            <type>java.time.ZoneId</type>
+            <description>zone id</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>Rounded</name>
+        <tag-class>controller.taglib.Rounded</tag-class>
+        <body-content>empty</body-content>
+        <description>prints rounded value</description>
+        <attribute>
+            <name>number</name>
+            <required>true</required>
+            <type>java.lang.Double</type>
+            <description>decimal number</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>Formatted</name>
+        <tag-class>controller.taglib.Formatted</tag-class>
+        <body-content>empty</body-content>
+        <description>prints formatted name</description>
+        <attribute>
+            <name>firstName</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>name</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>lastName</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <description>name</description>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>MapUser</name>
+        <tag-class>controller.taglib.MapUser</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>UID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>BankAccount</name>
+        <tag-class>controller.taglib.BankAccount</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>UID</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>

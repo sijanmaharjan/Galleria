@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/error-pages/403/index.html</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/error-pages/404/index.html</location>
+    </error-page>
+    <error-page>
+        <error-code>405</error-code>
+        <location>/WEB-INF/error-pages/404/index.html</location>
+    </error-page>
+    <error-page>
+        <error-code>512</error-code>
+        <location>/WEB-INF/error-pages/512/index.html</location>
+    </error-page>
+    <error-page>
+        <exception-type>javax.ejb.EJBException</exception-type>
+        <location>/WEB-INF/error-pages/512/index.html</location>
+    </error-page>
+    <error-page>
+        <exception-type>javax.persistence.PersistenceException</exception-type>
+        <location>/WEB-INF/error-pages/512/index.html</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/error-pages/500/index.html</location>
+    </error-page>
+
+    <context-param>
+        <param-name>APP_NAME</param-name>
+        <param-value>Galleria</param-value>
+    </context-param>
+    <context-param>
+        <param-name>HOME_URI</param-name>
+        <param-value>galleria.oh</param-value>
+    </context-param>
+    <context-param>
+        <param-name>ADMIN_HOME</param-name>
+        <param-value>galleria.admin</param-value>
+    </context-param>
+    <context-param>
+        <param-name>JSP_DIR_PREFIX</param-name>
+        <param-value>/WEB-INF/pages/</param-value>
+    </context-param>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>A Protected Page</web-resource-name>
+            <url-pattern>/galleria.admin</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+            <http-method>PUT</http-method>
+            <http-method>DELETE</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/WEB-INF/pages/admin/login.jsp</form-login-page>
+            <form-error-page>/WEB-INF/pages/admin/login.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+    <security-role>
+        <role-name>admin</role-name>
+    </security-role>
+
+    <session-config>
+        <session-timeout>
+            15
+        </session-timeout>
+    </session-config>
+
+
+    <filter-mapping>
+        <filter-name>ExceptionFilter</filter-name>
+        <url-pattern />
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>UserFilter</filter-name>
+        <url-pattern />
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AdminFilter</filter-name>
+        <url-pattern />
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>BlockingFilter</filter-name>
+        <url-pattern />
+    </filter-mapping>
+</web-app>

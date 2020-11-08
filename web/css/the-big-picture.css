@@ -1,0 +1,111 @@
+body {
+  /*background: url('images/sunset.jpg') no-repeat center center fixed;*/
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*background-size: cover;*/
+  /*-o-background-size: cover;*/
+}
+
+.carousel-item {
+  margin-top: -50px;
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-caption{
+!important;
+  left: auto;
+}
+
+.text-color-white{
+  padding-left: 30px;
+  height: 40vh;
+  background: rgb(255,255,255);
+  background: linear-gradient(167deg, rgba(255,255,255,0.6) 15%, rgba(0,0,0,0) 35%)
+}
+
+section{
+  margin-top: 50px;
+}
+
+#about{
+  padding: 30px;
+}
+
+#loginBtn{
+  position:absolute;
+  z-index: 100;
+  right: 20vw;
+  background-color: rgba(245,245,245, 0.5);
+  border: 0px;
+  border-radius: 0px 0px 5px 5px;
+  width: 100px;
+  height: 40px;
+  color: #1e1e1e;
+  padding-top: 10px;
+  font-size: 14pt;
+}
+
+#loginForm, #signupForm{
+  position:absolute;
+  z-index: 100;
+  right: 17vw;
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(200,200,200, 0.7);
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+
+#loginForm{
+  top: 50px;
+}
+
+#signupForm{
+  position: fixed;
+  bottom: 80px;
+  right: 3vw;
+}
+
+#loginForm input, #signupForm input{
+  height: 20px;
+  border: 0px;
+  border-radius: 3px;
+  font-size: 10pt;
+  padding: 0px 5px;
+}
+
+#loginForm button, #signupForm button {
+  height: 20px;
+  font-size: 10pt;
+  padding: 0px 5px;
+  width: 100%;
+}
+
+#loginForm #gender, #signupForm #gender{
+  !important;
+  width: 397px;
+  height: 20px;
+  font-size: 8pt;
+}
+
+#loginForm #login-btn, #loginForm #sign-up-btn, #signupForm #sign-up-btn{
+  background-color: #333333;
+  border: 0px;
+  margin-top: 3px;
+  border-radius: 3px;
+  color: #e6e6e6;
+}
+
+#loginForm a, #signupForm a{
+  font-size: 10pt;
+  text-decoration: underline;
+  padding: 0;
+  color: #1e1e1e;
+}

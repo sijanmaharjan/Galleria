@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>512 - Galleria</title>
+    <link rel="shortcut icon" href="galleria.svg" />
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:100,200,300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/error-pages/512.css">
+</head>
+<body class="loading">
+    <h1>512</h1>
+    <h2>Unexpected Error <b>:(</b> <a href="galleria.oh">Go Back</a></h2>
+    <div class="gears">
+        <div class="gear one">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="gear two">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="gear three">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function() {
+            setTimeout(function(){
+                $('body').removeClass('loading');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

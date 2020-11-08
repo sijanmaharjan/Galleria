@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="web:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/web_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Galleria/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Galleria" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.22.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javax.persistence-2.1.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/org.eclipse.persistence.antlr-2.5.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/org.eclipse.persistence.asm-2.5.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/org.eclipse.persistence.core-2.5.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/org.eclipse.persistence.jpa-2.5.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/org.eclipse.persistence.jpa.jpql-2.5.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jbcrypt-0.4.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jstl-1.2.jar" />
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/gson-2.8.6.jar" />
+          <element id="file-copy" path="$USER_HOME$/Desktop/groupdocs-watermark-20.5.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/gson-2.8.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/groupdocs-watermark-20.5.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

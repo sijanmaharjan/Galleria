@@ -1,0 +1,46 @@
+#preview-image-container{
+    position: fixed;
+    z-index: 10000;
+    top: 5%;
+    width: 100%;
+    display: none;
+}
+
+#image-view{
+    height: 90vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#prev-img-title{
+    position: fixed;
+    top: 1vh;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+#prev-img-desc{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    color: #e1e1e1;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 15%, rgba(0,0,0,0) 100%);
+    z-index: 19000;
+}
+#prev-img-rating{
+    position: fixed;
+    top: 1vh;
+    left: 0px;
+    color: #e1e1e1;
+}
+#prev-img-actions{
+    position: fixed;
+    top: 1vh;
+    right: 0px;
+    color: #e1e1e1;
+}

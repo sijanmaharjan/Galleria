@@ -1,0 +1,82 @@
+#profile-container{
+    display: none;
+    height: 380px;
+    border-radius: 30px;
+    padding: 20px;
+    position: fixed;
+    background-color: rgba(220,220,220, 0.9);
+    top: 20vh;
+    z-index: 3000;
+    overflow-wrap: break-word;
+}
+
+#profile-container.profile-view{
+    width: 300px;
+    left: 40vw;
+}
+
+#profile-container.editor-view{
+    width: 500px;
+    left: 30vw;
+}
+
+#profile-container.profile-view #profile-picture{
+    height: 150px;
+    width: 150px;
+    border-radius: 80px;
+    border: 4px solid #e1e1e1;
+    position: fixed;
+    margin-top: -100px;
+    margin-left: 55px;
+}
+
+#profile-container.editor-view #profile-picture{
+    height: 150px;
+    width: 150px;
+    border-radius: 80px;
+    border: 4px solid #e1e1e1;
+    position: fixed;
+    margin-top: -100px;
+    margin-left: 160px;
+}
+
+#profile-content{
+    padding-top: 50px;
+}
+#profile-content #profile{
+    text-align: center;
+}
+#profile-editor-icon{
+    opacity: 50%;
+    cursor: pointer;
+}
+#profile-editor-icon:hover{
+    opacity: 100%;
+}
+#profile-content #editor{
+    display: none;
+}
+#profile-content input{
+    height: 20px;
+    border: 0px;
+    border-radius: 3px;
+    font-size: 10pt;
+    padding: 0px 5px;
+}
+
+#profile-content button {
+    height: 20px;
+    font-size: 10pt;
+    padding: 0px 5px;
+    width: 100%;
+}
+
+#profile-content select {
+    height: 20px;
+    width: 355px;
+    font-size: 8pt;
+}
+
+#profile-content .dropdown{
+    width: 397px;
+}
