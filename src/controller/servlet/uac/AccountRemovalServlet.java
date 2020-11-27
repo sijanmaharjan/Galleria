@@ -43,6 +43,7 @@ public class AccountRemovalServlet extends HttpServlet {
         }else{
             ServletContext context = req.getServletContext();
             context.setAttribute("error", "Failed to delete account.");
+            context.setAttribute("status", 403);
         }
         session.removeAttribute(AppContext.USER_ID);
         resp.sendRedirect("galleria.oh");

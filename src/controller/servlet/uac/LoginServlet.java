@@ -31,6 +31,7 @@ public class LoginServlet extends HttpServlet {
         } else {
             ServletContext context = req.getServletContext();
             context.setAttribute("error", "Username or Password Incorrect");
+            context.setAttribute("status", 402);
         }
         resp.sendRedirect(redirect);
     }

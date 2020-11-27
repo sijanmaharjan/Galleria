@@ -39,6 +39,7 @@ public class SignupServlet extends HttpServlet {
         }else{
             ServletContext context = req.getServletContext();
             context.setAttribute("error", "Password didn't match");
+            context.setAttribute("status", 400);
         }
         resp.sendRedirect("galleria.oh");
     }

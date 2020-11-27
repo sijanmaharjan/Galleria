@@ -51,7 +51,8 @@ public class UserFilter implements Filter {
                     res.sendRedirect(homeUri);
                 } else {
                     if(context.getAttribute("error") != null){
-                        res.setStatus((int)context.getAttribute("status"));
+                        if(context.getAttribute("error") != null) res.setStatus((int)context.getAttribute("status"));
+                        else res.setStatus(500);
                     }else{
                         res.setStatus(402);
                     }

@@ -49,9 +49,11 @@ public class ProfileServlet extends HttpServlet {
             String confirm = req.getParameter("confirm");
             ServletContext context = req.getServletContext();
             if(!password.equals(confirm)){
-                context.setAttribute("error", "Cannot confirm password");
+                context.setAttribute("error", "Cannot confirm new password");
+                context.setAttribute("status", 400);
             }else if(userBeanRemote.checkPassword(UID, oldPassword)){
                 context.setAttribute("error", "Failed to change password.");
+                context.setAttribute("status", 403);
                 session.removeAttribute("UID");
             }else{
                 modified.setPassword(BCrypt.hashpw(password, BCrypt.gensalt(12)));
